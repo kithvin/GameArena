@@ -22,6 +22,10 @@ Technology Stack
 
 Vite React js and  Tailwind CSS Game Site
 
+* Installed Tailwind CSS = npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+
+* Initialize Tailwind CSS = npx tailwindcss init
+
 * Installed React Icon = npm install react-icons
 
 * Insalled axios for allows to send GET, POST, PUT, DELETE, and other types of HTTP requests = npm install axios
