@@ -20,7 +20,7 @@ function Header() {
         <input
           type="text"
           placeholder="Search Games"
-          className="px-2 bg-transparent outline-none"
+          className="px-2 bg-transparent outline-none dark:bg-cyan-500"
         />
       </div>
 
@@ -42,4 +42,4 @@ function Header() {
   );
 }
 
-export default Header; // Exporting the Header component for use in other parts of the application
+export default Header; 
