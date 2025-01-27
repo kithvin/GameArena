@@ -1,11 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  // Enabling dark mode with a custom class selector for manual control.
   darkMode: "selector",
 
-  darkMode: "media", // Use system preferences for dark mode.
+  // Specify the files Tailwind CSS should scan to generate utility classes.
+  // This ensures unused styles are purged in production for optimized performance.
 
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"], // Specify files for Tailwind to scan.
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 
+  // Plugins array for adding additional Tailwind CSS functionality
   theme: {
     extend: {},
   },

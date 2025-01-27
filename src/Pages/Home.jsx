@@ -4,9 +4,9 @@ import GenreList from "../Components/GenreList"; // Import GenreList Component
 function Home() {
   return (
     // Main grid container with 4 columns for small screens, adjusting on larger screens
-    <div className="grid grid-cols-4">
+    <div className="grid grid-cols-4 px-6">
       {/* Sidebar for Genre section, hidden on small screens and visible on medium screens and up */}
-      <div className="bg-red-500 h-full hidden md:block">
+      <div className=" hidden md:block">
         {/* Render the GenreList component within the sidebar */}
         <GenreList />
       </div>

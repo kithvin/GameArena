@@ -5,7 +5,7 @@ import { ThemeContext } from "./Context/ThemeContext"; // Importing the ThemeCon
 
 // Main App component
 
-function App() {
+export default function App() {
   const [theme, setTheme] = useState("dark"); // State variable to manage the current theme, default is 'dark'
 
   // useEffect to load the theme from localStorage when the component mounts
@@ -24,7 +24,7 @@ function App() {
       {/* Dynamically applying the theme class (dark or light) and background color based on the current theme */}
       <div
         className={`${theme}
-    ${theme == "dark" ? "bg-[#121212]" : null} h-[100vh] `}
+    ${theme == "dark" ? "bg-[#121212]" : null} min-h-[100vh] `}
       >
         {/* Rendering the Header component */}
         <Header />
@@ -35,4 +35,4 @@ function App() {
   );
 }
 
-export default App;
+

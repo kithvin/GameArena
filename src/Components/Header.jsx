@@ -5,7 +5,6 @@ import { HiMoon } from "react-icons/hi2"; // Importing the moon icon to represen
 import { HiSun } from "react-icons/hi2"; // Importing the sun icon to represent light mode
 import { ThemeContext } from "../Context/ThemeContext"; // Importing ThemeContext to manage the current theme
 
-
 // Header Component
 function Header() {
   const [toggle, setToggle] = useState(true); // State to handle theme toggle (true for dark mode, false for light mode)
@@ -50,4 +49,6 @@ function Header() {
   );
 }
 
-export default Header; 
+export default Header;
+
+
