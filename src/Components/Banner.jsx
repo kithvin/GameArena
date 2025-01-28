@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 
+// Banner component displays a game banner with a name, image, and button
+
 function Banner({ gameBanner }) {
-  // Using useEffect to log the gameBanner prop whenever it changes
+  // Log gameBanner prop whenever it updates
 
   useEffect(() => {
     console.log("gameBanner", gameBanner); // Dependency array ensures the effect runs only when gameBanner changes
@@ -16,6 +18,9 @@ function Banner({ gameBanner }) {
           Get Now
         </button>
       </div>
+
+      {/* Game banner image */}
+
       <img
         src={gameBanner.background_image}
         className="md:h-[450px] w-full object-fit rounded-xl"
