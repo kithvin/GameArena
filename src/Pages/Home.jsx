@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import GenreList from "../Components/GenreList"; // Import GenreList Component
 import GlobalApi from "../Services/GlobalApi"; // Import GlobalApi Component
 import Banner from "../Components/Banner"; // Import Banner Component
+import TrendingGames from "../Components/TrendingGames";
 
 function Home() {
   const [allGamesList, setAllGameList] = useState(); // State for storing the list of all games
@@ -31,9 +32,18 @@ function Home() {
         {/* Check if there are any games in the list, and display the banner for the first game */}
 
         {allGamesList?.length > 0 ? (
-          <Banner gameBanner={allGamesList[0]} /> // Pass the first game from the list to the Banner component
+          <div>
+            {/* Check if allGamesList has elements, and if true, render the following */}
+
+            {/* Pass the first game from the list to the Banner component */}
+            <Banner gameBanner={allGamesList[0]} />
+
+            {/* Pass the entire games list to the TrendingGames component */}
+            <TrendingGames gameList={allGamesList}/>
+
+          </div>
         ) : null}
-        {/* Null : If no games, render nothing */}
+        {/* Null : If allGamesList is empty or undefined, render nothing */}
       </div>
     </div>
   );

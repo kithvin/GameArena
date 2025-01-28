@@ -18,7 +18,7 @@ function GenreList() {
     // However, it seems like getGenreList should be a function call (e.g., getGenreList())
     GlobalApi.getGenreList.then((resp) => {
       // Log the results of the genre list response
-      console.log(resp.data.results); // Log the response data for debugging purposes
+      // console.log(resp.data.results); // Log the response data for debugging purposes
       setGenreList(resp.data.results); // Update the state with the retrieved genres
     });
   };

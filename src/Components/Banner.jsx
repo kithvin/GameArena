@@ -6,7 +6,7 @@ function Banner({ gameBanner }) {
   // Log gameBanner prop whenever it updates
 
   useEffect(() => {
-    console.log("gameBanner", gameBanner); // Dependency array ensures the effect runs only when gameBanner changes
+    // console.log("gameBanner", gameBanner); // Dependency array ensures the effect runs only when gameBanner changes
   });
   return (
     <div className="relative">
