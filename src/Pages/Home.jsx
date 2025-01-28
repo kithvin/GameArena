@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import GenreList from "../Components/GenreList"; // Import GenreList Component
-import GlobalApi from "../Services/GlobalApi";
+import GlobalApi from "../Services/GlobalApi"; // Import GlobalApi Component
+import Banner from "../Components/Banner"; // Import Banner Component
 
 function Home() {
-  const [allGamesList, setAllGameList] = useState();
+  const [allGamesList, setAllGameList] = useState(); // State for storing the list of all games
 
   // Fetches and logs all games on component mount using GlobalApi's getAllGames method.
   useEffect(() => {
@@ -26,7 +27,14 @@ function Home() {
 
       {/* Main game list section, takes up 4 columns on small screens and 3 columns on medium screens and up */}
 
-      <div className="col-span-4 md:col-span-3 bg-blue-400">Game List</div>
+      <div className="col-span-4 md:col-span-3 ">
+        {/* Check if there are any games in the list, and display the banner for the first game */}
+
+        {allGamesList?.length > 0 ? (
+          <Banner gameBanner={allGamesList[0]} /> // Pass the first game from the list to the Banner component
+        ) : null}
+        {/* Null : If no games, render nothing */}
+      </div>
     </div>
   );
 }
