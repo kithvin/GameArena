@@ -15,7 +15,9 @@ const axiosCreate = axios.create({
 
 const getGenreList = axiosCreate.get("/genres?key=" + key); // Pass the API key as a query parameter
 const getAllGames = axiosCreate.get("/games?key=" + key); // Fetches all games with a GET request and 'key' for authentication.
+const getGameListByGenreId=(id)=>axiosCreate.get('/games?key='+key+'&genres='+id); // Sends a GET request to fetch a list of games by genre ID using the specified key and genre ID.
 export default {
   getGenreList,
-  getAllGames
+  getAllGames,
+  getGameListByGenreId
 };

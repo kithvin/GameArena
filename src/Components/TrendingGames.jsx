@@ -21,7 +21,9 @@ function TrendingGames({ gameList }) {
         {gameList.map(
           (item, index) =>
             index < 4 && (
-              <div className="bg-[#76a8f75e] rounded-lg group hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer">
+              <div 
+              key={item.id || index} // Add a unique key prop to each element
+              className="bg-[#76a8f75e] rounded-lg group hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer">
                 {/* Game image */}
 
                 <img
@@ -43,3 +45,5 @@ function TrendingGames({ gameList }) {
 }
 
 export default TrendingGames;
+
+

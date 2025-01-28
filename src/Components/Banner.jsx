@@ -13,7 +13,7 @@ function Banner({ gameBanner }) {
       {/* Displays the game banner image with a responsive height, full width, and rounded corners */}
 
       <div className="absolute bottom-0 left-0 p-5 bg-gradient-to-t from-slate-900 to-transparent w-full">
-        <h2 className="text-[24px] text-white font-bold">{gameBanner.name}</h2>
+        <h2 className="text-[24px] text-white font-bold mb-3">{gameBanner.name}</h2>
         <button className="bg-blue-700 text-white font-bold text-[14px] py-2 px-4 rounded-lg shadow-md hover:bg-blue-800 focus:ring-2 focus:ring-blue-300 transition-all duration-300 ease-in-out">
           Get Now
         </button>
