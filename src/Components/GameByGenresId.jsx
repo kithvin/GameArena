@@ -23,7 +23,9 @@ function GameByGenresId({ gameList }) {
         {/* Mapping through the gameList array and rendering each game item */}
 
         {gameList.map((item) => (
-          <div className="bg-[#76a8f75e] p-3 rounded-lg mt-4 hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer">
+          <div
+          key={item.id} 
+          className="bg-[#76a8f75e] p-3 rounded-lg mt-4 hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer">
             {/* Game image */}
 
             <img
