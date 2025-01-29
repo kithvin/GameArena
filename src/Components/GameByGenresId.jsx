@@ -2,30 +2,30 @@ import React, { useEffect } from "react";
 
 // Functional component to handle games by genre IDs.
 
-function GameByGenresId({ gameList }) {
+function GameByGenresId({ gameList, selectedGenresName }) {
   useEffect(() => {
     // useEffect hook to log the 'gameList' to the console when the component mounts.
-
-    console.log("GameList", gameList);
+    // console.log("GameList", gameList);
   }, []); // Added dependency
 
   return (
     <div>
       {/* Title of the section */}
 
-      <h2 className="font-bold text-[30px] dark:text-white mt-5 pb-10 h-full">
-        Popular Games
+      <h2 className="font-bold text-[30px] dark:text-white mt-5 pb-3 h-full">
+        {selectedGenresName} Games
       </h2>
 
       {/* Grid layout to display the games */}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Mapping through the gameList array and rendering each game item */}
 
         {gameList.map((item) => (
           <div
-          key={item.id} 
-          className="bg-[#76a8f75e] p-3 rounded-lg mt-4 hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer">
+            key={item.id}
+            className="bg-[#76a8f75e] p-3 rounded-lg mt-4 hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer"
+          >
             {/* Game image */}
 
             <img

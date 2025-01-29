@@ -7,7 +7,8 @@ import GameByGenresId from "../Components/GameByGenresId"; // Import GameByGenre
 
 function Home() {
   const [allGamesList, setAllGameList] = useState(); // State for storing the list of all games
-  const [gameListByGenres, setGameListByGenres] = useState([]); // State to store the list of games filtered by the selected genre.
+  const [gameListByGenres, setGameListByGenres] = useState([]); // State to store the list of games filtered by the selected genre
+  const [selectedGenresName,setSelectedGenresName]=useState("Action"); // State to store the selected genre name, defaulting to 'Action'
 
   // Fetches and logs all games on component mount using GlobalApi's getAllGames method.
   useEffect(() => {
@@ -25,14 +26,12 @@ function Home() {
       // 'resp.data.results' contains the array of games from the API response
 
       setAllGameList(resp.data.results); // Updates the state with the fetched games data
-      
     });
   };
 
   // Function to fetch games based on a specific genre ID
 
-  const getGameByGenresId=(id)=>{
-    
+  const getGameByGenresId = (id) => {
     // Call the API method to get the list of games for the given genre ID (hardcoded to 4 here)
     GlobalApi.getGameListByGenreId(id).then((resp) => {
       // Log the results of the API response to the console
@@ -48,7 +47,10 @@ function Home() {
       {/* Sidebar for Genre section, hidden on small screens and visible on medium screens and up */}
       <div className=" hidden md:block">
         {/* Display the GenreList component in the sidebar for medium and larger screens */}
-        <GenreList genereId={(genereId)=>getGameByGenresId(genereId)}/>
+        <GenreList
+          genereId={(genereId)=>getGameByGenresId(genereId)}
+          selectedGenresName={(name)=>setSelectedGenresName(name)} // Updates the selected genre name when a genre is selected
+        />
       </div>
 
       {/* Main game list section, takes up 4 columns on small screens and 3 columns on medium screens and up */}
@@ -66,7 +68,8 @@ function Home() {
             <TrendingGames gameList={allGamesList} />
 
             {/* Render games by genres */}
-            <GameByGenresId gameList={gameListByGenres} />
+            <GameByGenresId gameList={gameListByGenres} 
+            selectedGenresName={selectedGenresName} />
           </div>
         ) : null}
         {/* Null : If allGamesList is empty or undefined, render nothing */}
@@ -76,3 +79,6 @@ function Home() {
 }
 
 export default Home;
+
+
+

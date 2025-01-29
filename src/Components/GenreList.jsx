@@ -3,7 +3,7 @@ import GlobalApi from "../Services/GlobalApi"; // Import GlobalApi Component
 
 /*** GenreList component: Fetches and logs the list of genres on mount. ***/
 
-function GenreList({genereId}) {
+function GenreList({genereId,selectedGenresName}) {
   const [genreList, setGenreList] = useState([]); // State to hold the list of genres
   const [activeIndex, setActiveIndex] = useState([0]); // State to track the active genre index
 
@@ -37,7 +37,8 @@ function GenreList({genereId}) {
           group rounded-lg hover:dark:bg-gray-600 ${
             activeIndex == index ? "bg-gray-300 dark:bg-gray-600" : null
           }`}
-          onClick={() => {setActiveIndex(index);genereId(item.id)}} // Sets the active genre index and updates the selected genre ID when clicked.
+          onClick={()=>{setActiveIndex(index);genereId(item.id);
+            selectedGenresName(item.name)}} // Sets the active genre index and updates the selected genre ID when clicked.
         >
           {/* Display the genre's background image */}
           <img
