@@ -44,3 +44,9 @@ How to Run the GameArena Project
 4. Reinstall Dependencies: Run the command npm install to reinstall all required dependencies.
 
 5. Run the Development Server: Start the development server by executing npm run dev. The project will be accessible at http://localhost:3000 by default (configured for port 3000).
+
+**********************************************************************************
+
+🌐 Deployment
+
+* The project is live and accessible at: (https://game-arena-gamma.vercel.app/)  
