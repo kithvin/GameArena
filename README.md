@@ -1,6 +1,6 @@
 GameArena 🎮
 
-GameArena is a modern and visually stunning gaming website, designed to provide a seamless user experience for gamers. Built with cutting-edge technologies like Vite, React.js, and Tailwind CSS, GameArena delivers lightning-fast performance and highly responsive designs.
+GameArena frontend web application is a modern and visually stunning gaming website, designed to provide a seamless user experience for gamers. Built with cutting-edge technologies like Vite, React.js, and Tailwind CSS, GameArena delivers lightning-fast performance and highly responsive designs.
 
 Features
 
